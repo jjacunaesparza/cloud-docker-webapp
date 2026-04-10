@@ -2,20 +2,8 @@ name: Compilando mi aplicacion
 
 on:
   push:
-    branches:
+    branches: # Este pipeline solo se ejecuta con un push en la rama main
      - main
-    paths-ignore:
-     - 'src/*'
-     - 'package.json'
-     - 'public/*'
-    tags:
-     - v*.*.*
-    # tags-ignore:
-    #  - v*.*.*-beta
-    # paths:
-    #  - 'src/*'
-    #  - 'package.json'
-    #  - 'public/*'
 
 jobs:
   build:
