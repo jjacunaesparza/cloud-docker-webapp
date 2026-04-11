@@ -11,7 +11,7 @@ on:
     tags:
       - v*.*.* # Solo se ejecuta si el push incluye un tag que comienza con "v"
 #    tags-ignore:
-#      - v*.*.*beta # No se ejecuta si el push incluye el tag "v0.0.0"
+#      - v*.*.*beta # No se ejecuta si el push incluye el tag "vbeta"
 #   paths:
 #     - 'src/*' # Solo se ejecuta si los archivos dentro de src/ han sido modificados
 #     - 'package.json' # Solo se ejecuta si package.json ha sido modificado
