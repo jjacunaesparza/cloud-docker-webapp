@@ -3,15 +3,19 @@ name: Compilando mi aplicacion
 on:
   push:
     branches: # Este pipeline solo se ejecuta con un push en la rama main
-     - main
+      - main
     paths-ignore:
       - 'src/*' # Solo se ejecuta si los archivos fuera de src/ han sido modificados
       - 'package.json' # Solo se ejecuta si package.json no ha sido modificado
       - 'public/*' # Solo se ejecuta si los archivos fuera de public/ han sido modificados
-#    paths:
-#      - 'src/*' # Solo se ejecuta si los archivos dentro de src/ han sido modificados
-#      - 'package.json' # Solo se ejecuta si package.json ha sido modificado
-#      - 'public/*' # Solo se ejecuta si los archivos dentro de public/ han sido modificados
+    tags:
+      - v*.*.* # Solo se ejecuta si el push incluye un tag que comienza con "v"
+#    tags-ignore:
+#      - v*.*.*beta # No se ejecuta si el push incluye el tag "v0.0.0"
+#   paths:
+#     - 'src/*' # Solo se ejecuta si los archivos dentro de src/ han sido modificados
+#     - 'package.json' # Solo se ejecuta si package.json ha sido modificado
+#     - 'public/*' # Solo se ejecuta si los archivos dentro de public/ han sido modificados
 
 jobs:
   build:
